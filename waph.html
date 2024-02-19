@@ -54,8 +54,7 @@
             }
             setInterval(displayTime, 500);
         </script>
-        <div id="email" onclick="showhideEmail()">Show my email</div>
-        <script src="email.js"></script>
+       
         <canvas id="analog-clock" width="150" height="150" style="background-color:#999"></canvas>
         <script src="https://waph-uc.github.io/clock.js"></script>
         <script>
@@ -121,13 +120,7 @@
                 displayComic(); // Initial update
 
 
-                var lastVisit = localStorage.getItem('lastVisit');
-                if (lastVisit) {
-                    $('#welcome-message').text('Welcome back! Your last visit was ' + lastVisit);
-                } else {
-                    $('#welcome-message').text('Welcome to my homepage!');
-                }
-                localStorage.setItem('lastVisit', new Date().toLocaleString());
+             
 
             </script>
 
