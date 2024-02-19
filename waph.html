@@ -47,6 +47,9 @@
             <img src="images/headshot.jpg" alt="My headshot" width="100">
         </div>
         <div id="welcome-message"></div>
+        <div id="email" onclick="showhideEmail()">Show my email</div>
+        <script src="email.js"></script>
+
         <div id="digital-clock"></div>
         <script>
             function displayTime() {
@@ -119,7 +122,13 @@
                 }
                 displayComic(); // Initial update
 
-
+                var lastVisit = localStorage.getItem('lastVisit');
+                if (lastVisit) {
+                    $('#welcome-message').text('Welcome back! Your last visit was ' + lastVisit);
+                } else {
+                    $('#welcome-message').text('Welcome to my homepage!');
+                }
+                localStorage.setItem('lastVisit', new Date().toLocaleString());
              
 
             </script>
